@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-dark">
+    <!--NavBar-->
+    <!--NavBar Logo-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="./assets/Netflix_Logo_RGB.png" alt="Logo" class="d-inline-block align-text-top img-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--NavBar Sinistra-->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/browse" target="_blank">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/browse/genre/83" target="_blank">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/browse/genre/34399" target="_blank">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/latest" target="_blank">Recently Added</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/browse/my-list" target="_blank">My List</a>
+                </li>
+            </ul>
+            <!--NavBar Destra-->
+            <ul class="navbar-nav ml-auto justify-content-end align-items-center">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <input class="bg-dark" type="search" id="site-search" name="q" placeholder="Search">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.netflix.com/Kids" target="_blank">KIDS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-bell"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown dropdown-menu-left ">
+                    <button class="btn btn-dark dropdown-toggle dropdown-menu-left mx-3" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img
+                            src="http://occ-0-4575-2582.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABVrwTVUu0vi8TrkRGVeBGYVORH9qG1D6nXpX9cMWJp71hXVzawvt73UKs76KXcn_bEj41nibhNDQ_24hOcVfQ7swug6DZcLWuR-N.png?r=59d" />
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-left bg-dark " aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-white" href="https://www.netflix.com/profiles/manage"
+                            target="_blank"><i class="bi bi-pencil"></i> Gestisci profili</a>
+                        <a class="dropdown-item text-white"
+                            href="https://www.netflix.com/account/profile/transfercontext" target="_blank"><i
+                                class="bi bi-sign-turn-slight-right"></i> Trasferisci profilo</a>
+                        <a class="dropdown-item text-white" href="https://www.netflix.com/YourAccount"
+                            target="_blank"><i class="bi bi-person"></i> Account</a>
+                        <a class="dropdown-item text-white" href="https://www.netflix.com/YourAccount"
+                            target="_blank"><i class="bi bi-question-circle"></i> Centro assistenza</a>
+                        <hr class="dropdown-divider bg-light ">
+                        <a class="dropdown-item text-white text-center" href="https://www.netflix.com/it/logout"
+                            target="_blank"> Esci da Netflix</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Banner Sinistro-->
+    <section>
+        <div class="container-fluid p-0">
+            <div class="bg-dark">
+                <div class="row align-items-center m-0">
+                    <div class="col-12 col-md-6 mb-10 mb-md-0 me-5">
+                        <h3 class="h4 fw-bold ">TV Shows </span>
+                            <button class="btn btn-dark dropdown-toggle  border-white mx-3" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Genres
+                            </button>
+                            <ul class="dropdown-menu  bg-dark">
+                                <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Drama</a></li>
+                                <li><a class="dropdown-item text-white" href="#">Romantic</a></li>
+                            </ul>
+                        </h3>
+                    </div>
+                    <!--Banner Destro-->
+                    <div class="col-12 col-md-6 col-lg-auto ms-auto g-0">
+                        <button class="btn bg-dark"><i class="bi bi-cast text-white"></i></button>
+                        <button class="btn bg-dark"><i class="bi bi-aspect-ratio text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--I sezione cards-->
+    <!--Intestazione-->
+    <div class="jumbotron jumbotron-fluid bg-dark ">
+        <div class="container m-0 ">
+            <h4 class=" text-white">Trending Now</h4>
+        </div>
+    </div>
+    <!--cards-->
+    <div class="container-fluid p-0 mb-5" id="first">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 bg-dark  g-1 mx-0 ">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/1.png" class="card-img-top img-fluid" alt="1">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/2.png" class="card-img-top img-fluid" alt="2">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/3.png" class="card-img-top img-fluid" alt="3">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/4.png" class="card-img-top img-fluid" alt="4">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/5.png" class="card-img-top img-fluid" alt="5">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/6.png" class="card-img-top img-fluid" alt="6">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!--II sezione cards-->
+    <!--Intestazione-->
+    <div class="jumbotron jumbotron-fluid bg-dark ">
+        <div class="container m-0 ">
+            <h4 class=" text-white">Watch It Again</h4>
+        </div>
+    </div>
+    <!--Cards-->
+    <div class="container-fluid p-0 mb-5" id="second">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 bg-dark mb-5 g-1 mx-0 ">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/7.png" class="card-img-top img-fluid" alt="7">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/8.png" class="card-img-top img-fluid" alt="8">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/9.png" class="card-img-top img-fluid" alt="9">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/10.png" class="card-img-top img-fluid" alt="10">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/11.png" class="card-img-top img-fluid" alt="11">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/12.png" class="card-img-top img-fluid" alt="12">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--III sezione cards-->
+    <!--Intestazione-->
+    <div class="jumbotron jumbotron-fluid bg-dark ">
+        <div class="container m-0 ">
+            <h4 class=" text-white">New Releases</h4>
+        </div>
+    </div>
+    <!--Cards-->
+    <div class="container-fluid p-0 mb-5" id="third">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 bg-dark mb-5 g-1 mx-0 ">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/13.png" class="card-img-top img-fluid" alt="13">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/14.png" class="card-img-top img-fluid" alt="14">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/15.png" class="card-img-top" alt="15">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/16.png" class="card-img-top img-fluid img-fluid" alt="16">
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="./assets/17.png" class="card-img-top img-fluid" alt="17">
+                </div>
+            </div>
+            <div class="col mb-18">
+                <div class="card">
+                    <img src="./assets/18.png" class="card-img-top img-fluid" alt="18">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Footer-->
+    <footer>
+        <!--Social-->
+        <div class="container ">
+            <div class="col-12 col-md-6 col-lg-auto ms-auto g-0">
+                <button class="btn bg-dark"><a class="link-secondary text-decoration-none"
+                        href="https://www.facebook.com/netflixitalia/" target="_blank"><i
+                            class="bi bi-facebook text-white"></i></a></button>
+                <button class="btn bg-dark"><a class="link-secondary text-decoration-none"
+                        href="https://www.instagram.com/NetflixIT/" target="_blank"><i
+                            class="bi bi-instagram text-white"></i></a></button>
+                <button class="btn bg-dark"><a class="link-secondary text-decoration-none"
+                        href="https://twitter.com/NetflixIT" target="_blank"><i
+                            class="bi bi-twitter text-white"></i></a></button>
+                <button class="btn bg-dark"><a class="link-secondary text-decoration-none"
+                        href="https://www.youtube.com/channel/UCi_T2R1AzOCun4-PI4Or2ng" target="_blank"><i
+                            class="bi bi-youtube text-white"></i></a></button>
+            </div>
+            <br>
+            <!--Links-->
+            <div class="row">
+                <div class="col-md-3 col-6 ">
+                    <ul>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://www.netflix.com/browse/audio-description" target="_blank">Audio and
+                                subtitles</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://media.netflix.com/it/"
+                                target="_blank">Media Center</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/privacy"
+                                target="_blank">Privacy</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://help.netflix.com/it/contactus"
+                                target="_blank">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <ul>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://www.netflix.com/browse/audio-description" target="_blank">Audio
+                                Description</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://ir.netflix.net/ir-overview/profile/default.aspx" target="_blank">Investor
+                                Relation</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/notices"
+                                target="_blank">Legal Notice</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <ul>
+                        <li><a class="link-secondary text-decoration-none" href="https://help.netflix.com/it/"
+                                target="_blank">Help Center</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://jobs.netflix.com/"
+                                target="_blank">Jobs</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://help.netflix.com/legal/privacy#cookies" target="_blank">Cookies
+                                Preference</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6">
+                    <ul>
+                        <li><a class="link-secondary text-decoration-none" href="https://www.netflix.com/it/redeem"
+                                target="_blank">Gift Cards</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://help.netflix.com/legal/termsofuse" target="_blank">Terms of Use</a></li>
+                        <li><a class="link-secondary text-decoration-none"
+                                href="https://help.netflix.com/legal/corpinfo" target="_blank">Corporate Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!--Button-->
+        <div class="container ">
+            <div class="row ps-4 pb-4">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <button class="btn btn-dark  text-secondary border-secondary" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Service Code
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!--Copywright-->
+        <div class="me-5 d-none d-lg-block text-secondary  ms-5 ">
+            <span> © 1997-2019 Netflix Inc. (i-0d00fcda2fdf9c0de)</span>
+        </div>
+        <br>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

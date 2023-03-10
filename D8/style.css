@@ -1,0 +1,94 @@
+body {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Logo */
+body>nav>img {
+    width: 8%;
+}
+
+/* Dropdown Menù Profilo Nav destra */
+
+#navbarNav>ul.navbar-nav.ml-auto.justify-content-end.align-items-center>li.nav-item.dropdown>div {
+    margin-left: -100%;
+}
+
+/* Img Profilo Nav destra */
+#dropdownMenuButton1>img {
+    width: 186%;
+}
+
+/* Dropdown Menù Genres - li su Hover */
+body>section>div>div>div>div.col-12.col-md-6.mb-10.mb-md-0.me-5>h3>ul>li>a:hover {
+    background-color: black;
+}
+
+#navbarNav>ul.navbar-nav.ml-auto.justify-content-end>li.nav-item.dropdown {
+    width: 10%;
+    margin-right: 5%;
+}
+
+/* Dropdown Menù Profilo Nav destra - li su Hover */
+#navbarNav>ul.navbar-nav.ml-auto.justify-content-end.align-items-center>li.nav-item.dropdown.dropdown-menu-left>div>a:hover {
+    background-color: black
+}
+
+/* Dropdown Menù Profilo Nav destra - li su Hover */
+#navbarNav>ul.navbar-nav.ml-auto.justify-content-end.align-items-center>li.nav-item.dropdown>div {
+    margin-right: 10%;
+}
+
+body>section>div>div>div>div.col-12.col-md-6.mb-10.mb-md-0>h3 {
+    color: white
+}
+
+
+#navbarNav>ul.navbar-nav.ml-auto.justify-content-end.align-items-center>li:nth-child(1)>div>ul {
+    background-color: black;
+}
+
+
+/* Animazione fade-in sezioni cards */
+#first {
+    opacity: 0;
+    animation: fadeIn 6s linear forwards 1s;
+}
+
+#second {
+    opacity: 0;
+    animation: fadeIn 6s linear forwards 2s;
+}
+
+#third {
+    opacity: 0;
+    animation: fadeIn 6s linear forwards 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Social */
+body>footer>div:nth-child(1)>div.col-12.col-md-6.col-lg-auto.ms-auto.g-0>button>a>i {
+    margin-left: 107%;
+
+}
+
+/* Animazione scale Cards */
+.card:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
